@@ -1,0 +1,40 @@
+{
+  "name": "app-project",
+  "version": "1.0",
+  "private": true,
+  "proxy": "https://apis.map.qq.com",
+  "homepage": ".",
+  "dependencies": {
+    "antd": "^3.11.2",
+    "axios": "^0.18.0",
+    "echarts": "^4.2.0-rc.2",
+    "hoist-non-react-statics": "^3.2.1",
+    "localforage": "^1.7.3",
+    "lodash": "^4.17.11",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "react": "16.6.0",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.4.0-beta.6",
+    "react-scripts-ts": "2.16.0",
+    "styled-components": "^4.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/echarts": "^4.1.3",
+    "@types/hoist-non-react-statics": "^3.0.1",
+    "@types/jest": "^23.1.4",
+    "@types/lodash": "^4.14.119",
+    "@types/node": "^10.5.2",
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/styled-components": "^4.1.4",
+    "typescript": "3.1.6"
+  }
+}
