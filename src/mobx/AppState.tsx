@@ -1,7 +1,9 @@
-import { action, observable, computed } from "mobx";
+import { action, observable, computed, runInAction } from "mobx";
+import { getLocation } from "base/request";
 
-export default class AppState {
+class AppState {
   @observable public num: number = 0;
+  @observable public obj: any = { show: false };
   @computed
   get numVal() {
     return this.num;
@@ -14,4 +16,12 @@ export default class AppState {
   public reduceNum(newNum: number) {
     this.num -= newNum;
   }
+  @action
+  setShow(show: boolean) {
+    getLocation().then(() => {
+      runInAction(() => this.obj = { show });
+    });
+  }
 }
+
+export default new AppState();

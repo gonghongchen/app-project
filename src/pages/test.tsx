@@ -3,26 +3,23 @@ import { Link } from "react-router-dom";
 import { isEmpty } from "lodash";
 import { Button } from "antd";
 import Chart from "components/Chart";
-import BaseHoc, { IUserBaseInforProps } from "base/BaseHoc";
+import BaseHoc from "base/BaseHoc";
 import { getLocation } from "base/request";
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
 const { Component, Fragment } = React;
 const colors = ["#5793f3", "#d14a61", "#675bba"];
 
-interface ITestProps {
-  name: string;
-  age: number;
-  store: IUserBaseInforProps;
-}
+
 interface ITestState {
   name: string;
   age: number;
 }
 
+@inject('userBaseInfor')
 @observer
 // @BaseHoc
-class Test extends Component<ITestProps, ITestState> {
+class Test extends Component<any, ITestState> {
   state = {
     name: "",
     age: 0
@@ -167,7 +164,7 @@ class Test extends Component<ITestProps, ITestState> {
     ]
   };
 
-  constructor(props: ITestProps) {
+  constructor(props: any) {
     super(props);
 
     console.log(isEmpty([]));
@@ -185,7 +182,7 @@ class Test extends Component<ITestProps, ITestState> {
         <Button onClick={this.doClick}>Pass in an object</Button>
         <Button onClick={this.doClick2}>Pase in a function</Button>
         <p>age: {this.state.age}</p>
-        <p>username: {this.props.store.userBaseInfor.getUserName}</p>
+        <p>username: {this.props.userBaseInfor.getUserName}</p>
         <p>
           <Link to="/index">to index</Link>
         </p>
