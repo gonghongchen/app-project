@@ -7,7 +7,8 @@
     "interface-name": true,
     "max-classes-per-file": false,
     "member-access": false,
-    "no-var-requires": false
+    "no-var-requires": false,
+    "jsx-no-lambda": false
   },
   "linterOptions": {
     "exclude": ["config/**/*.js", "node_modules/**/*.ts"]

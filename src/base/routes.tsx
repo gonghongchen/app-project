@@ -6,6 +6,7 @@ const { lazy } = React;
 const Mobx = lazy(() => import("pages/mobx"));
 const Detail = lazy(() => import("pages/detail"));
 const Test = lazy(() => import("pages/test"));
+const Hook = lazy(() => import("pages/hook"));
 const Index: React.SFC<{}> = () => {
   return (
     <div>
@@ -18,5 +19,6 @@ export default {
   "/index": Index,
   "/mobx": Mobx,
   "/detail": Detail,
-  "/test": Test
+  "/test": Test,
+  "/hook": Hook
 };

@@ -179,6 +179,8 @@ class Test extends Component<any, ITestState> {
   render() {
     return (
       <Fragment>
+        <img src="https://img.alicdn.com/tfs/TB1ztBlaMMPMeJjy1XbXXcwxVXa-200-60.png"/>
+        <img src="https://img.alicdn.com/tfs/TB1t5ObaBxRMKJjy0FdXXaifFXa-200-60.png"/>
         <Button onClick={this.doClick}>Pass in an object</Button>
         <Button onClick={this.doClick2}>Pase in a function</Button>
         <p>age: {this.state.age}</p>
