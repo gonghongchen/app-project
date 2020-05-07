@@ -1,6 +1,13 @@
 import { action, observable, computed, runInAction } from "mobx";
 import { getLocation } from "base/request";
 
+interface IAppState {
+  num: number,
+  obj: {
+    show: boolean
+  },
+  addNum: (newNum: number) => null,
+}
 class AppState {
   @observable public num: number = 0;
   @observable public obj: any = { show: false };
@@ -24,4 +31,5 @@ class AppState {
   }
 }
 
+export { IAppState }
 export default new AppState();
